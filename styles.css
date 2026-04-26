@@ -40,13 +40,13 @@ h2 {
   font-weight: 600;
   font-size: 48px;
   line-height: 50px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-align: center;
   vertical-align: middle;
 }
 
 p {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-body);
   font-size: 24px;
   line-height: 32.5px;
   font-weight: 400;
@@ -91,13 +91,23 @@ blockquote {
   padding-top: 30px;
   margin-top: 60px;
   margin-bottom: 60px;
-  font-family: Montserrat;
-  letter-spacing: 0px;
+  font-family: var(--font-body);
+  letter-spacing: 0;
   text-align: center;
 }
 
 .text-secondary {
   color: var(--secondary-color);
+}
+
+/* Shared flex centering */
+.omea-section__banner__icon,
+.omea-grid__item .omea-grid__item__icon,
+.omea-quote,
+.omea-section5__founder__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Header Styles */
@@ -194,7 +204,7 @@ header {
 }
 
 .omea-stat {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-numbers);
   font-size: 25.5px;
   line-height: 36px;
   letter-spacing: 0;
@@ -203,7 +213,6 @@ header {
 }
 
 .omea-section__banner__item p {
-  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -218,9 +227,6 @@ header {
   box-shadow: 0px 4px 6px -1px #0000001a;
   background-color: var(--secondary-color);
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .omea-section1 p {
@@ -258,7 +264,6 @@ header {
 }
 
 .omea-grid__item p {
-  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
@@ -272,19 +277,11 @@ header {
   background: var(--secondary-color-light);
   color: var(--secondary-color);
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .omea-grid__item .omea-grid__item__icon.omea-grid__item__icon--green {
   background-color: var(--accent-green-light);
   color: var(--accent-green);
-}
-
-.omea-grid__item .omea-grid__item__icon.omea-grid__item__icon--red {
-  background-color: var(--secondary-color-light);
-  color: var(--secondary-color);
 }
 
 /* Troisième section styles */
@@ -310,11 +307,11 @@ header {
 
 .omea-section__application__list h3 {
   color: var(--secondary-color);
-  font-family: Lora;
+  font-family: var(--font-heading);
   font-weight: 500;
   font-size: 32px;
   line-height: 32px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   vertical-align: middle;
 }
 
@@ -323,7 +320,6 @@ header {
 }
 
 .omea-section__application__list p {
-  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
@@ -349,7 +345,6 @@ header {
 }
 
 .omea-section4 > p {
-  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
@@ -368,7 +363,7 @@ header {
 }
 
 .omea-stat-big {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
   font-size: 40px;
   line-height: 26px;
@@ -379,7 +374,6 @@ header {
 }
 
 .omea-grid--3-columns .omea-grid__item p {
-  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 20px;
   line-height: 26px;
@@ -412,9 +406,6 @@ header {
   background: var(--secondary-color-light);
   color: var(--secondary-color);
   border-radius: var(--radius-md);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 60px;
 }
 
@@ -449,9 +440,6 @@ header {
   background: var(--secondary-color-light);
   color: var(--secondary-color);
   border-radius: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* Sixième section styles */
@@ -463,7 +451,6 @@ header {
 }
 
 .omea-newsletter h2 {
-  font-family: "Lora", serif;
   font-weight: 600;
   font-size: 32px;
   line-height: 60px;
@@ -472,7 +459,7 @@ header {
 }
 
 .omea-newsletter h4 {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
   font-size: 24px;
   line-height: 80px;
@@ -482,7 +469,6 @@ header {
 }
 
 .omea-newsletter p {
-  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 60px;
@@ -534,9 +520,6 @@ header {
   width: 67px;
   background-color: #ffffff;
   color: var(--primary-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .omea-newsletter__privacy {
