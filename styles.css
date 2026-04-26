@@ -1,5 +1,6 @@
 html {
   scroll-padding-top: 80px;
+  overflow-x: hidden;
 }
 
 :root {
@@ -19,6 +20,7 @@ body {
   font-family: var(--font-body);
   margin: 0;
   padding-top: 80px;
+  overflow-x: hidden;
 }
 
 h1,
@@ -110,7 +112,9 @@ blockquote {
   align-items: center;
 }
 
-/* Header Styles */
+/* ============================================================
+   HEADER
+   ============================================================ */
 
 header {
   color: var(--primary-color);
@@ -151,7 +155,10 @@ header {
   color: inherit;
 }
 
-/* Body Styles */
+/* ============================================================
+   BODY / SECTIONS
+   ============================================================ */
+
 .omea-section {
   padding: 22px var(--section-padding-x);
   display: flex;
@@ -170,6 +177,7 @@ header {
   text-align: center;
 }
 
+/* Section 1 */
 .omea-section1 {
   background: linear-gradient(180deg, #f7f3ee 0%, #f7f3ee 50%, #ffffff 100%);
 }
@@ -229,14 +237,14 @@ header {
   border-radius: 50%;
 }
 
-.omea-section1 p {
+.omea-section1 p:not(.omea-section__banner__item p) {
   font-weight: 500;
   text-align: left;
   letter-spacing: normal;
   vertical-align: baseline;
 }
 
-/* Seconde section styles */
+/* Section 2 */
 .omea-section2 {
   background-color: #f7f3ee;
 }
@@ -284,7 +292,7 @@ header {
   color: var(--accent-green);
 }
 
-/* Troisième section styles */
+/* Section 3 */
 .omea-section3 {
   background-color: #ffffff;
 }
@@ -339,7 +347,7 @@ header {
   margin-top: 40px;
 }
 
-/* Quatrieme section styles */
+/* Section 4 */
 .omea-section4 {
   background-color: #f7f3ee;
 }
@@ -385,7 +393,7 @@ header {
   align-self: flex-end;
 }
 
-/* Cinquième section styles */
+/* Section 5 */
 .omea-section5 {
   padding: 0;
   background-color: #f7f3ee7d;
@@ -442,7 +450,7 @@ header {
   border-radius: 14px;
 }
 
-/* Sixième section styles */
+/* Section 6 */
 .omea-section6 {
   display: flex;
   flex-direction: row;
@@ -528,7 +536,7 @@ header {
   font-style: italic;
 }
 
-/* Septième section styles */
+/* Section 7 */
 .omea-section7 {
   background-color: #ffffff;
   display: flex;
@@ -560,7 +568,10 @@ header {
   align-items: flex-end;
 }
 
-/* Footer styles */
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
 footer.omea-footer {
   background-color: var(--primary-color);
   color: #ffffff;
@@ -625,4 +636,485 @@ footer.omea-footer {
   background-color: #ffffff1a;
   border-radius: 14px;
   color: #ffffff;
+}
+
+/* ============================================================
+   RESPONSIVE — TABLET (≤ 1024px)
+   ============================================================ */
+
+@media (max-width: 1024px) {
+  :root {
+    --section-padding-x: 40px;
+  }
+
+  h1 {
+    font-size: 52px;
+    line-height: 64px;
+  }
+
+  h2 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  /* Header */
+  .omea-header__right {
+    gap: 30px;
+  }
+
+  /* Section 1 */
+  .omea-section__content {
+    gap: 30px;
+  }
+
+  .omea-section__banner {
+    margin: 30px 0;
+    padding: 32px var(--section-padding-x);
+    gap: 20px;
+  }
+
+  /* Section 2 */
+  .omea-grid--4-columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  /* Section 3 */
+  .omea-section__application {
+    padding: 0;
+  }
+
+  .omea-section__application__list {
+    padding: 0 30px;
+  }
+
+  .omea-section__application__list h3 {
+    font-size: 24px;
+  }
+
+  .omea-section__application__list p {
+    font-size: 16px;
+  }
+
+  /* Section 4 */
+  .omea-section4 > p {
+    width: 80%;
+  }
+
+  .omea-grid--3-columns {
+    padding: 30px 40px 60px;
+  }
+
+  /* Section 5 */
+  .omea-section5__left {
+    padding: 40px var(--section-padding-x);
+  }
+
+  .omea-section5__founders {
+    padding: 0;
+    margin-top: 60px;
+  }
+
+  /* Section 7 */
+  .omea-section7__left {
+    padding: 40px var(--section-padding-x) 40px 0;
+  }
+
+  /* Footer */
+  .omea-footer__container {
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .omea-footer__newsletter {
+    flex: 100%;
+    padding-bottom: 24px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE (≤ 768px)
+   ============================================================ */
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding-x: 20px;
+  }
+
+  html {
+    scroll-padding-top: 70px;
+  }
+
+  body {
+    padding-top: 70px;
+  }
+
+  h1 {
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  blockquote {
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  /* ---- Header ---- */
+  header {
+    height: 70px;
+    padding: 0 var(--section-padding-x);
+    flex-wrap: wrap;
+  }
+
+  header img {
+    height: 36px;
+    width: auto;
+  }
+
+  .omea-header__right {
+    gap: 12px;
+  }
+
+  .omea-nav {
+    display: none; /* Masquer la nav sur mobile — à remplacer par un burger si besoin */
+  }
+
+  header button {
+    font-size: 12px;
+    height: 38px;
+    padding: 2px 10px;
+    text-align: center;
+  }
+
+  /* ---- Section 1 ---- */
+  .omea-section1 {
+    padding: 32px var(--section-padding-x);
+  }
+
+  .omea-section__content {
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .omea-section__left {
+    max-width: 100%;
+  }
+
+  .omea-section__left h1 br {
+    display: none;
+  }
+
+  .omea-section__right img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .omea-section__banner {
+    flex-direction: column;
+    margin: 24px 0;
+    padding: 32px var(--section-padding-x);
+    gap: 32px;
+  }
+
+  .omea-section__banner__item {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #f1988040;
+  }
+
+  .omea-section__banner__item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  /* ---- Section 2 ---- */
+  .omea-section2 {
+    padding: 32px var(--section-padding-x);
+  }
+
+  .omea-section2 h2 br {
+    display: none;
+  }
+
+  .omea-grid--4-columns {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 24px 0 48px;
+  }
+
+  .omea-grid__item {
+    min-height: auto;
+    padding: 24px 20px;
+  }
+
+  /* ---- Section 3 ---- */
+  .omea-section3 {
+    padding: 32px var(--section-padding-x);
+  }
+
+  .omea-section__application {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .omea-section__application__list {
+    border-left: none;
+    border-top: 3px solid var(--secondary-color);
+    padding: 24px 0 0;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .omea-section__application__list h3 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .omea-section__application__list p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .omea-section__application__image {
+    max-height: 320px;
+    margin-top: 0;
+  }
+
+  .omea-section__application__image img {
+    max-height: 320px;
+    width: auto;
+  }
+
+  .omea-section3 > button {
+    margin-top: 16px;
+  }
+
+  /* ---- Section 4 ---- */
+  .omea-section4 {
+    padding: 32px var(--section-padding-x);
+  }
+
+  .omea-section4 > p {
+    width: 100%;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .omea-grid--3-columns {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px 0 48px;
+  }
+
+  .omea-grid--3-columns .omea-grid__item {
+    padding: 28px 20px;
+  }
+
+  .omea-stat-big {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 12px;
+  }
+
+  .omea-grid--3-columns .omea-grid__item p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .omea-caption {
+    align-self: center;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  /* ---- Section 5 ---- */
+  .omea-section5 {
+    flex-direction: column;
+  }
+
+  .omea-section5__left {
+    padding: 32px var(--section-padding-x);
+  }
+
+  .omea-section5__left h2 {
+    text-align: center;
+  }
+
+  .omea-section5__right {
+    width: 100%;
+  }
+
+  .omea-section5__right img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .omea-section5__founders {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    padding: 0;
+    gap: 24px;
+  }
+
+  /* ---- Section 6 (newsletter) ---- */
+  .omea-section6 {
+    padding: 40px var(--section-padding-x);
+  }
+
+  .omea-newsletter {
+    min-width: unset;
+    width: 100%;
+    max-width: 100%;
+    padding: 40px 20px 32px;
+    gap: 12px;
+    box-sizing: border-box;
+  }
+
+  .omea-newsletter__star {
+    display: none; /* Masquer l'étoile décorative sur mobile (déborde) */
+  }
+
+  .omea-newsletter h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .omea-newsletter h4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .omea-newsletter p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .omea-newsletter__form {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .omea-newsletter__form input {
+    max-width: 100%;
+    padding: 0 16px;
+    flex: 1;
+  }
+
+  .omea-newsletter__button {
+    width: 67px;
+    min-width: 67px;
+    flex-shrink: 0;
+  }
+
+  /* ---- Section 7 ---- */
+  .omea-section7 {
+    flex-direction: column;
+    padding: 32px var(--section-padding-x) 0;
+  }
+
+  .omea-section7__left {
+    padding: 0;
+  }
+
+  .omea-section7__left h2,
+  .omea-section7__left p {
+    text-align: center;
+  }
+
+  .omea-section7__stores {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+
+  .omea-section7__stores img {
+    height: 46px;
+    width: auto;
+  }
+
+  .omea-section7__right {
+    justify-content: center;
+  }
+
+  .omea-section7__right img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  /* ---- Footer ---- */
+  footer.omea-footer {
+    padding: 32px var(--section-padding-x) 24px;
+  }
+
+  .omea-footer__logo {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .omea-footer__container {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .omea-footer__newsletter {
+    flex: unset;
+    width: 100%;
+    gap: 20px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #ffffff1a;
+  }
+
+  .omea-footer__newsletter .omea-newsletter__form {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .omea-footer__newsletter .omea-newsletter__form input {
+    max-width: 100%;
+    flex: 1;
+    padding: 0 12px;
+  }
+
+  .omea-footer__newsletter .omea-newsletter__form .omea-newsletter__button {
+    width: 67px;
+    min-width: 67px;
+    flex-shrink: 0;
+  }
+
+  .omea-footer__menu {
+    flex: unset;
+    width: 100%;
+  }
+
+  .omea-footer__menu h4 {
+    margin-bottom: 12px;
+  }
+
+  .omea-footer__rights {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+  }
 }
