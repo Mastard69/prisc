@@ -1,6 +1,11 @@
+html {
+  scroll-padding-top: 80px;
+}
+
 :root {
   --font-body: "Montserrat", sans-serif;
   --font-heading: "Lora", serif;
+  --font-numbers: "Inter", sans-serif;
   --primary-color: #37231d;
   --secondary-color: #f19880;
   --secondary-color-light: #f1988018;
@@ -13,6 +18,7 @@
 body {
   font-family: var(--font-body);
   margin: 0;
+  padding-top: 80px;
 }
 
 h1,
@@ -22,6 +28,37 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
+}
+
+h1 {
+  font-size: 72px;
+  line-height: 90px;
+  font-weight: 600;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 50px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  line-height: 32.5px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: middle;
+  color: #37231db2;
+}
+
+a:has(> button) {
+  align-self: center;
+  text-decoration: none;
 }
 
 button {
@@ -54,6 +91,9 @@ blockquote {
   padding-top: 30px;
   margin-top: 60px;
   margin-bottom: 60px;
+  font-family: Montserrat;
+  letter-spacing: 0px;
+  text-align: center;
 }
 
 .text-secondary {
@@ -69,6 +109,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0px 1px 2px -1px #0000001a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #fff;
 }
 
 .omea-header__right {
@@ -103,9 +150,13 @@ header {
 }
 
 .omea-section > h1,
+.omea-section > h2,
 .omea-section5__left > h1,
+.omea-section5__left > h2,
 .omea-section > h1 + p,
-.omea-section5__left > h1 + p {
+.omea-section > h2 + p,
+.omea-section5__left > h1 + p,
+.omea-section5__left > h2 + p {
   text-align: center;
 }
 
@@ -142,15 +193,41 @@ header {
   flex: 1;
 }
 
+.omea-stat {
+  font-family: "Inter", sans-serif;
+  font-size: 25.5px;
+  line-height: 36px;
+  letter-spacing: 0;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.omea-section__banner__item p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: center;
+  margin: 0;
+}
+
 .omea-section__banner__item .omea-section__banner__icon {
   width: 64px;
   height: 64px;
-  box-shadow: 0px 2px 4px -2px #0000001a;
+  box-shadow: 0px 4px 6px -1px #0000001a;
   background-color: var(--secondary-color);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.omea-section1 p {
+  font-weight: 500;
+  text-align: left;
+  letter-spacing: normal;
+  vertical-align: baseline;
 }
 
 /* Seconde section styles */
@@ -160,7 +237,7 @@ header {
 
 .omea-grid {
   display: grid;
-  padding: 0 var(--section-padding-x) 150px;
+  padding: 40px var(--section-padding-x) 120px;
 }
 
 .omea-grid--4-columns {
@@ -174,10 +251,19 @@ header {
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
-  padding: 16px;
+  padding: 8px 16px;
   border-radius: 16px;
   text-align: center;
   min-height: 270px;
+}
+
+.omea-grid__item p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: center;
 }
 
 .omea-grid__item .omea-grid__item__icon {
@@ -211,7 +297,6 @@ header {
   justify-content: space-between;
   flex-direction: row;
   padding: 0 var(--section-padding-x);
-  margin-top: 60px;
 }
 
 .omea-section__application__list {
@@ -220,12 +305,16 @@ header {
   flex: 1;
   align-self: flex-start;
   margin-top: 60px;
+  margin-bottom: 40px;
 }
 
 .omea-section__application__list h3 {
   color: var(--secondary-color);
+  font-family: Lora;
+  font-weight: 500;
   font-size: 32px;
-  line-height: 24px;
+  line-height: 32px;
+  letter-spacing: 0%;
   vertical-align: middle;
 }
 
@@ -233,10 +322,25 @@ header {
   margin-top: 0;
 }
 
+.omea-section__application__list p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.omea-section__application__list p:last-child {
+  margin-bottom: 0;
+}
+
 .omea-section__application__image {
   display: flex;
   justify-content: center;
   max-height: 460px;
+  margin-top: 40px;
 }
 
 /* Quatrieme section styles */
@@ -244,10 +348,43 @@ header {
   background-color: #f7f3ee;
 }
 
+.omea-section4 > p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: center;
+  width: 60%;
+  align-self: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
 .omea-grid--3-columns {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 30px 120px 100px;
+}
+
+.omea-stat-big {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 26px;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.omea-grid--3-columns .omea-grid__item p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0;
+  text-align: center;
 }
 
 .omea-caption {
@@ -322,7 +459,35 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 60px 0 30px;
+  padding: 60px 0 60px;
+}
+
+.omea-newsletter h2 {
+  font-family: "Lora", serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 60px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.omea-newsletter h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 80px;
+  letter-spacing: 0;
+  text-align: center;
+  margin: 0;
+}
+
+.omea-newsletter p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 60px;
+  letter-spacing: 0;
+  text-align: center;
 }
 
 .omea-newsletter {
@@ -390,7 +555,19 @@ header {
 
 .omea-section7__left {
   flex: 2;
-  padding: 60px var(--section-padding-x);
+  padding: 60px var(--section-padding-x) 60px 0;
+}
+
+.omea-section7__left h2,
+.omea-section7__left p {
+  text-align: left;
+}
+
+.omea-section7__stores {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
 }
 
 .omea-section7__right {

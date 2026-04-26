@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -83,9 +83,11 @@
       <div class="omea-header__right">
         <nav class="omea-nav">
           <ul class="omea-nav__list">
-            <li><a class="omea-nav__link" href="#">Suivi de PMA</a></li>
-            <li><a class="omea-nav__link" href="#">L'application</a></li>
-            <li><a class="omea-nav__link" href="#">Notre équipe</a></li>
+            <li><a class="omea-nav__link" href="#section2">Suivi de PMA</a></li>
+            <li>
+              <a class="omea-nav__link" href="#section3">L'application</a>
+            </li>
+            <li><a class="omea-nav__link" href="#section5">Notre équipe</a></li>
           </ul>
         </nav>
         <button>
@@ -133,7 +135,7 @@
               />
             </svg>
           </div>
-          <h3>3,9%</h3>
+          <span class="omea-stat">3,9%</span>
           <p>des naissances en France sont issues d'une PMA</p>
         </div>
         <div class="omea-section__banner__item">
@@ -177,7 +179,7 @@
               </g>
             </svg>
           </div>
-          <h3>1 couple sur 5</h3>
+          <span class="omea-stat">1 couple sur 5</span>
           <p>est concerné par l'infertilité</p>
         </div>
         <div class="omea-section__banner__item">
@@ -198,17 +200,17 @@
               />
             </svg>
           </div>
-          <h3>150 000</h3>
+          <span class="omea-stat">150 000</span>
           <p>tentatives de PMA chaque année en France</p>
         </div>
       </div>
     </section>
-    <section class="omea-section omea-section2">
-      <h1>
+    <section id="section2" class="omea-section omea-section2">
+      <h2>
         Tout ce dont vous avez besoin,<br /><span class="text-secondary"
           >au même endroit</span
         >
-      </h1>
+      </h2>
       <p>
         Une suite d'outils conçus spécifiquement pour alléger votre charge
         mentale et vous accompagner au quotidien
@@ -459,10 +461,10 @@
         </div>
       </div>
     </section>
-    <section class="omea-section omea-section3">
-      <h1>
-        Comment fonctionne <span class="text-secondary">l’application ?</span>
-      </h1>
+    <section id="section3" class="omea-section omea-section3">
+      <h2>
+        Comment fonctionne <span class="text-secondary">l'application ?</span>
+      </h2>
       <p>
         Un accompagnement complet pour vous aider à mieux comprendre, organiser
         et vivre votre parcours au quotidien
@@ -498,27 +500,32 @@
       <button>Application bientôt disponible</button>
     </section>
     <section class="omea-section omea-section4">
-      <h1>
+      <h2>
         Plus de 1300 femmes* nous ont
         <span class="text-secondary">confié leur histoire</span>
-      </h1>
+      </h2>
       <p>
         Vous aussi, contribuez à faire évoluer l’accompagnement des femmes en
         parcours PMA en participant à notre enquête afin de partager votre
         ressenti
       </p>
-      <button>Répondre au questionnaire</button>
+      <a
+        href="https://docs.google.com/forms/d/1N0gqRZqzmpRuaMEk_p0WyEvHCy3VjRAKS1DHlPNQfF4/viewform?edit_requested=true"
+        target="_blank"
+      >
+        <button>Répondre au questionnaire</button>
+      </a>
       <div class="omea-grid omea-grid--3-columns">
         <div class="omea-grid__item">
-          <h3>97%</h3>
+          <span class="omea-stat-big">97%</span>
           <p>ressentent une forte charge mentale liée à la PMA</p>
         </div>
         <div class="omea-grid__item">
-          <h3>80%</h3>
-          <p>expriment un besoin d’accompagnement personnalisé</p>
+          <span class="omea-stat-big">80%</span>
+          <p>expriment un besoin d'accompagnement personnalisé</p>
         </div>
         <div class="omea-grid__item">
-          <h3>73,6%</h3>
+          <span class="omea-stat-big">73,6%</span>
           <p>
             souhaitent être accompagnées sur la gestion du stress et des
             émotions
@@ -530,9 +537,9 @@
         accessible depuis Mars 2026
       </span>
     </section>
-    <section class="omea-section omea-section5">
+    <section id="section5" class="omea-section omea-section5">
       <div class="omea-section5__left">
-        <h1>Notre <span class="text-secondary">équipe</span></h1>
+        <h2>Notre <span class="text-secondary">équipe</span></h2>
         <blockquote>
           <div class="omea-quote omea-quote--start">
             <svg width="24" height="24"><use href="#icon-quote" /></svg>
@@ -605,11 +612,10 @@
           Soyez parmi les premières
           <span class="text-secondary">à découvrir Oméa</span>
         </h2>
-        <h3>L'application est actuellement en cours de développement.</h3>
+        <h4>L'application est actuellement en cours de développement.</h4>
         <p>
           Inscrivez-vous dès maintenant pour rejoindre notre liste d’attente,
-          <br />
-          <br />être informée du lancement et bénéficier d'un accès prioritaire.
+          être informée du lancement et bénéficier d'un accès prioritaire.
         </p>
         <div class="omea-newsletter__form">
           <input
@@ -626,12 +632,28 @@
     </section>
     <section class="omea-section omea-section7">
       <div class="omea-section7__left">
-        <h1>L’application <span class="text-secondary">Oméa</span></h1>
+        <h2>L'application <span class="text-secondary">Oméa</span></h2>
         <p>
           L’application de suivi PMA complet, qui vous accompagne dans votre
           parcours, et vous soutient émotionnellement sera bientôt disponible
           sur
         </p>
+        <div class="omea-section7__stores">
+          <a href="#">
+            <img
+              src="assets/images/google-play.png"
+              alt="Disponible sur Google Play"
+              height="58"
+            />
+          </a>
+          <a href="#">
+            <img
+              src="assets/images/app-store.png"
+              alt="Disponible sur l'App Store"
+              height="58"
+            />
+          </a>
+        </div>
       </div>
       <div class="omea-section7__right">
         <img
@@ -669,11 +691,11 @@
         <div class="omea-footer__menu">
           <h4>Navigation</h4>
           <ul>
-            <li><a href="#section1">L’application</a></li>
+            <li><a href="#section3">L’application</a></li>
             <li><a href="#section2">Suivi de PMA</a></li>
-            <li><a href="#section3">Blog</a></li>
-            <li><a href="#section4">FAQ</a></li>
-            <li><a href="#section5">Télécharger l’app</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Télécharger l’app</a></li>
           </ul>
         </div>
         <div class="omea-footer__menu">
