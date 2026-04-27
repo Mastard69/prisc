@@ -190,7 +190,19 @@ header {
 }
 
 .omea-section__left {
-  max-width: 520px;
+  flex: 4;
+}
+
+.omea-section__right {
+  flex: 5;
+  display: flex;
+  justify-content: center;
+}
+
+.omea-section__right img {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
 }
 
 .omea-section__banner {
@@ -251,7 +263,7 @@ header {
 
 .omea-grid {
   display: grid;
-  padding: 40px var(--section-padding-x) 120px;
+  padding: 40px var(--section-padding-x) 60px;
 }
 
 .omea-grid--4-columns {
@@ -345,6 +357,12 @@ header {
   justify-content: center;
   max-height: 460px;
   margin-top: 40px;
+}
+
+.omea-section__application__image img {
+  max-height: 460px;
+  width: auto;
+  aspect-ratio: 1/1;
 }
 
 /* Section 4 */
@@ -460,8 +478,8 @@ header {
 
 .omea-newsletter h2 {
   font-weight: 600;
-  font-size: 32px;
-  line-height: 60px;
+  font-size: 28px;
+  line-height: 48px;
   letter-spacing: 0;
   text-align: center;
 }
@@ -469,8 +487,8 @@ header {
 .omea-newsletter h4 {
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: 24px;
-  line-height: 80px;
+  font-size: 22px;
+  line-height: 32px;
   letter-spacing: 0;
   text-align: center;
   margin: 0;
@@ -478,8 +496,8 @@ header {
 
 .omea-newsletter p {
   font-weight: 400;
-  font-size: 24px;
-  line-height: 60px;
+  font-size: 22px;
+  line-height: 32px;
   letter-spacing: 0;
   text-align: center;
 }
